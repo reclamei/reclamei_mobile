@@ -42,16 +42,16 @@ class _ComplaintsCarouselContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250,
+      height: 220,
       child: ListView.builder(
         shrinkWrap: true,
         padding: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
         scrollDirection: Axis.horizontal,
-        itemCount: Complaint.complaints.isEmpty ? Complaint.complaints.length : 1,
+        itemCount: Complaint.complaints.isEmpty ? 1 : Complaint.complaints.length,
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.only(right: 5),
-            child: Complaint.complaints.isNotEmpty ?
+            child: Complaint.complaints.isEmpty ?
               AddComplaintCard() :
               ComplaintCard(complaint: Complaint.complaints[index],),
           );
@@ -72,11 +72,31 @@ class AddComplaintCard extends StatelessWidget {
           width: MediaQuery.of(context).size.width / 2,
           height: 150,
           decoration: BoxDecoration(
-            color: Colors.black.withAlpha(50),
+            color: Colors.black.withAlpha(40),
             borderRadius: BorderRadius.circular(8),
           ),
-          // child:
-          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 80,
+                height: 80,
+                decoration: BoxDecoration(
+                  color: ThemeColors.primaryColor.withAlpha(70),
+                  borderRadius: BorderRadius.circular(120),
+                ),
+                child: InkWell(
+                  child: Icon(
+                    Icons.post_add,
+                    size: 40,
+                    color: ThemeColors.fontColor,
+                  ),
+                  onTap: () {}
+                ),
+              )
+            ],
+          )
+        ),
       ],
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reclamei_mobile/components/sections/default_button.dart';
-import 'package:reclamei_mobile/components/sections/default_entry_field.dart';
+import 'package:reclamei_mobile/components/custom_widgets/default_button.dart';
+import 'package:reclamei_mobile/components/custom_widgets/default_entry_field.dart';
 import 'package:reclamei_mobile/themes/theme_colors.dart';
 import 'package:reclamei_mobile/views/first_login.dart';
 import 'package:reclamei_mobile/views/home.dart';

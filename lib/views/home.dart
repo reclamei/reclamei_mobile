@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:reclamei_mobile/components/sections/account_actions.dart';
 import 'package:reclamei_mobile/components/sections/header.dart';
 import 'package:reclamei_mobile/components/sections/complaints_carousel.dart';
+import 'package:reclamei_mobile/components/sections/scoreboard.dart';
 
 import '../components/app_bar_home.dart';
 
@@ -19,7 +20,7 @@ class Home extends StatelessWidget {
         children: <Widget>[
           Header(),
           ComplaintsCarousel(),
-          AccountActions(),
+          Scoreboard(totalProblems: 100, totalProblemsSolved: 21,),
         ],
       ),
     );
